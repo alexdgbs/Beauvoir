@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 function ResetPassword() {
   const { token } = useParams();
+  const navigate = useNavigate();
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
+  const [redirecting, setRedirecting] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,6 +31,14 @@ function ResetPassword() {
 
       if (response.ok) {
         setSuccess(true);
+        
+        // Set a delay before redirecting so the user can read the message
+        setTimeout(() => {
+          setRedirecting(true);
+          setTimeout(() => {
+            navigate('/');
+          }, 1000); // Additional delay after showing "Redireccionando..."
+        }, 2000); // Initial delay to show success message
       } else {
         setError(data.message || 'HUBO UN ERROR');
       }
@@ -47,6 +57,7 @@ function ResetPassword() {
         {success ? (
           <div className="text-green-500 text-xs font-bold mb-4">
             TU CONTRASEÑA HA SIDO RESTABLECIDA EXITOSAMENTE.
+            {redirecting && <div className="mt-2">REDIRECCIONANDO...</div>}
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="w-full">
