@@ -14,16 +14,16 @@ const Contact = () => {
         {/*Celular*/}
         <source
           media="(max-width: 640px)"
-          srcSet="https://static.lefties.com/assets/public/8094/23d5/23254f86886c/33793ecd95bd/A_1/A_1.webp?ts=1741189350992&w=1900"
+          srcSet="https://static.lefties.com/assets/public/29ec/f667/bbe949e7b47f/71c8e35c7ef3/A_1/A_1.webp?ts=1742890679497&w=1900"
         />
         {/*iPad/Tablet*/}
         <source
           media="(min-width: 641px) and (max-width: 1024px)"
-          srcSet="https://static.lefties.com/assets/public/8094/23d5/23254f86886c/33793ecd95bd/A_1/A_1.webp?ts=1741189350992&w=1900"
+          srcSet="https://static.lefties.com/assets/public/29ec/f667/bbe949e7b47f/71c8e35c7ef3/A_1/A_1.webp?ts=1742890679497&w=1900"
         />
         {/*Desktop*/}
         <img
-          src="https://static.lefties.com/assets/public/bb02/7c12/4b2041179191/e67967725f32/S_1/S_1.jpg?ts=1741189352522&w=1900"
+          src="https://static.lefties.com/assets/public/e3bf/420e/e2ab448b893d/3778214ed8c6/S_1/S_1.jpg?ts=1742890681894&w=1900"
           alt="Imagen de contacto"
           className="w-full object-cover h-full md:h-auto"
         />
@@ -32,15 +32,15 @@ const Contact = () => {
       {/*Overlay fijo*/}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center px-6">
-          <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold">
+          <h1 className="text-white text-4xl border-b font-bold">
             CONTÁCTANOS
           </h1>
-          <p className="text-white mt-4 text-sm">
-            ¡Estamos aquí para ayudarte!
+          <p className="text-white mt-4 text-xs font-semibold">
+            ¡ESTAMOS AQUI PARA AYUDARTE!
           </p>
           <div>
             <motion.button
-              className="rounded-full mt-4 md:mt-6 px-4 md:px-6 py-1.5 md:py-2 bg-white text-black text-xs md:text-sm font-medium hover:bg-black hover:text-white transition duration-300 tracking-wider"
+              className="mt-4 md:mt-6 px-4 md:px-6 py-2 bg-white text-black text-xs md:text-sm font-medium hover:bg-black hover:text-white transition duration-300 tracking-wider"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

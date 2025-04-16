@@ -31,14 +31,12 @@ function ResetPassword() {
 
       if (response.ok) {
         setSuccess(true);
-        
-        // Set a delay before redirecting so the user can read the message
         setTimeout(() => {
           setRedirecting(true);
           setTimeout(() => {
             navigate('/');
-          }, 1000); // Additional delay after showing "Redireccionando..."
-        }, 2000); // Initial delay to show success message
+          }, 1000);
+        }, 2000);
       } else {
         setError(data.message || 'HUBO UN ERROR');
       }

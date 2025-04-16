@@ -138,8 +138,8 @@ function Productos() {
     setDrawerOpen(true);
     setQuantity(1);
     setDrawerError('');
-    setSelectedSize('M'); // Reinicia la talla a la opción por defecto al abrir
-    setSelectedColor(prod.colors && prod.colors.length > 0 ? prod.colors[0].name : ''); // Establece el primer color como predeterminado
+    setSelectedSize('M'); 
+    setSelectedColor(prod.colors && prod.colors.length > 0 ? prod.colors[0].name : '');
   };
 
   const currentProduct = products.find(p => p.id === selectedProductId);
@@ -179,7 +179,7 @@ function Productos() {
       return;
     }
 
-    if (!selectedColor && currentProduct && currentProduct.colors && currentProduct.colors.length > 0) {
+    if (!selectedColor && currentProduct?.colors?.length > 0) {
       setDrawerError("Por favor, selecciona un color.");
       return;
     }
